@@ -10,8 +10,9 @@ import chapter2.util.BeanFactory;
  */
 public class PersonServiceImpl implements PersonService {
 
-    private final PersonDao personDao = (PersonDao) BeanFactory.getBean("chapter2/dao/impl/PersonDaoImpl.java");
+    private final PersonDao personDao = (PersonDao) BeanFactory.getBean("chapter2.dao.impl.PersonDaoImpl");
 
+    @Override
     public Person findPerson() {
         return personDao.getPerson();
     }

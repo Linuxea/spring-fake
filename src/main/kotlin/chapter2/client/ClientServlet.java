@@ -16,10 +16,11 @@ import java.io.IOException;
 @WebServlet(urlPatterns = "/demo1")
 public class ClientServlet extends HttpServlet {
 
-    private final PersonController personController = (PersonController) BeanFactory.getBean("chapter2/controller/PersonController");
+    private final PersonController personController = (PersonController) BeanFactory.getBean("chapter2.controller.PersonController");
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.getWriter().write(personController.getPerson().toString());
+        resp.getWriter().flush();
     }
 }

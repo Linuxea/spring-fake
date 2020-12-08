@@ -9,7 +9,7 @@ import chapter2.util.BeanFactory;
  */
 public class PersonController {
 
-    private final PersonService personService = (PersonService) BeanFactory.getBean("chapter2/service/impl/PersonServiceImpl.java");
+    private final PersonService personService = (PersonService) BeanFactory.getBean("chapter2.service.impl.PersonServiceImpl");
 
     public Person getPerson() {
         return personService.findPerson();
